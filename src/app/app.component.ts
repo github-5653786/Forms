@@ -13,6 +13,7 @@ export class AppComponent {
     this.showIcons = true;
   }
   onSubmit() {
+    alert("Submitted");
     window.location.reload();
   }
 
