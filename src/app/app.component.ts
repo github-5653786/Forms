@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'localstorage2';
+  showIcon: boolean;
+  showIcons: boolean;
+  constructor() {
+    this.showIcon = false;
+    this.showIcons = true;
+  }
+  onSubmit() {
+    window.location.reload();
+  }
+
+  iconHide() {
+    let a = (document.getElementById("Password") as HTMLInputElement);
+    if (a.type === 'password') {
+      a.type = 'text';
+      this.showIcon = true;
+      this.showIcons = false;
+
+    } else {
+      a.type = 'password';
+      this.showIcon = false;
+      this.showIcons = true;
+
+    }
+  }
 }
